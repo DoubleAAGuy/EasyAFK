@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "easyafk",
+	"version": "${version}",
+	"name": "EasyAFK",
+	"description": "Make AFKing so easy!",
+	"authors": [
+		"DoubleAAGuy"
+	],
+	"contact": {
+		"homepage": "http://easyafk.duckdns.org/",
+		"sources": "https://github.com/DoubleAAGuy/EasyAFK"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/easyafk/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"name.modid.EasyAFK"
+		],
+		"client": [
+			"name.modid.EasyAFKClient"
+		]
+	},
+	"mixins": [
+		"easyafk.mixins.json",
+		{
+			"config": "easyafk.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.17.3",
+		"minecraft": "~1.21.8",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
